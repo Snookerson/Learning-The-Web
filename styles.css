@@ -2,4 +2,92 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+}
+
+.headerContainer {
+}
+
+.menuBox {
+    padding: 50px;
+    background-color: #f72585;
+    display: flex;
+    justify-content: center;
+
+}
+.menu {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    color: azure;
+    font-style: bold;
+ 
+}
+
+
+.welcomeBoxContainer {
+    display: flex;
+    justify-content: center;
+}
+.welcomeBox {
+    background-color: #B5179E;
+    width: 1000px;
+    padding: 100px;
+
+
+}
+
+.welcomeText {
+    text-align: center;
+    color: azure;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1.2em;
+    padding-bottom: 40px;
+    
+}
+
+h2 {
+    padding: 0px;
+}
+
+
+.photoBoxContainer {
+    display: flex;
+    justify-content: center;
+}
+.photoBox {
+    background-color: #7209B7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photoGrid {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.photos {
+    width: 200px;
+    height: 200px;
+    background-color: #560BAD;
+}
+
+.firstPhoto {
+    order: 1;
+}
+
+.lastPhoto {
+    order: -1;
 }
