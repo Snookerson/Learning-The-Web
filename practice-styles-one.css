@@ -1,0 +1,175 @@
+/* Fonts */
+
+/* IBM Plex Sans Thai Looped */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap');
+
+/* All document setings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+/* Responsive styles */
+
+/* Mobile */
+@media only screen and (max-width: 400px) {
+    .feature-html,
+    .feature-css,
+    .feature-js,
+    .feature-my-projects {
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .feature-html,
+    .feature-css,
+    .feature-js,
+    .feature-my-projects {
+        width: 50%;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 961px) {
+    .feature-html,
+    .feature-css,
+    .feature-js,
+    .feature-my-projects {
+        width: 25%;
+    }
+}
+
+
+
+
+/* General settings */
+
+body {
+    font-family: IBM Plex Sans Thai Looped;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main parent element */
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    f
+}
+
+/* Main child element */
+.section {
+    width: 100%;
+    height: 150px; /* Delete this, so you can change every other childs height */
+    display: flex;
+    justify-content: center;
+}
+
+
+/* HEADER */
+.header {
+    background-color: #80af96; /* This was: #9DCFB4 */
+    display: flex;
+    height: 400px;
+}
+
+/* Sub-Main parent element */
+.section-outer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Sub-Main child element */
+/* Here we have a 100% width proprety, so the future sections won't change because of screen size */
+.header .section-inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* This element is fixed at the top, overlaying other elements below it. */
+.menu {
+    height: 40px;
+    position: fixed;
+    background-color: rgba(83,99,127,.7);
+/*     background-blend-mode: multiply; */
+    backdrop-filter: blur(5px);
+}
+
+.header-logo {
+    height: 30px;
+    width: 30px;
+}
+
+
+/* If we set height to 100% it almost looks perfect but there will be 40px behind the menu
+(it is overlaying). So I added a menu tall margint to top and a 90% height (100% = .header 400px height;
+90% = 360px) */
+.welcome {
+    height: 90%;
+    margin-top: 40px;
+    flex-direction: column;
+}
+.upper-text,
+.lower-text {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0 7.5%;
+    color: #F8F8FF;
+}
+.upper-text {
+    font-size: 2.3em;
+    letter-spacing: .3em;
+    font-weight: 600;
+}
+
+.lower-text-first {
+    font-size: 1.3em;
+    letter-spacing: .3em;
+}
+
+.lower-text-second {
+    margin-top: 30px;
+    font-size: 1em;
+    letter-spacing: .1em;
+}
+
+/* FEATURES */
+.features {
+    background-color: #AD8897;
+}
+
+/* Sub-Main child element */
+/*  Here we dont have a 100% width proprety, so the future sections can change because of screen size  */
+.features .section-inner {
+    border: 1px solid #F8F8FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content */
+
+.content {
+    background-color:  #BAD5CF;
+    align-items: center;
+    height: 500px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #F6D6A9;
+    align-items: center;
+    
+}
