@@ -19,8 +19,15 @@
     .feature-html,
     .feature-css,
     .feature-js,
-    .feature-my-projects {
+    .feature-my-projects,
+    .feature-insta,
+    .feature-about-me {
         width: 100%;
+    }
+
+    .upper-text {
+        margin-bottom: 20px;
+        
     }
 }
 
@@ -29,8 +36,11 @@
     .feature-html,
     .feature-css,
     .feature-js,
-    .feature-my-projects {
+    .feature-my-projects,
+    .feature-insta,
+    .feature-about-me {
         width: 50%;
+
     }
 }
 
@@ -39,8 +49,12 @@
     .feature-html,
     .feature-css,
     .feature-js,
-    .feature-my-projects {
+    .feature-my-projects,
+    .feature-insta,
+    .feature-about-me {
         width: 25%;
+        max-width: 16.666666%;
+        height: 100px;
     }
 }
 
@@ -69,7 +83,7 @@ a {
 /* Main child element */
 .section {
     width: 100%;
-    height: 150px; /* Delete this, so you can change every other childs height */
+ /* Delete this, so you can change every other childs height */
     display: flex;
     justify-content: center;
 }
@@ -79,7 +93,7 @@ a {
 .header {
     background-color: #80af96; /* This was: #9DCFB4 */
     display: flex;
-    height: 400px;
+    height: 500px;
 }
 
 /* Sub-Main parent element */
@@ -89,7 +103,7 @@ a {
 }
 
 /* Sub-Main child element */
-/* Here we have a 100% width proprety, so the future sections won't change because of screen size */
+/* Here we have a 100% width proprety, so any future sections won't change because of screen size */
 .header .section-inner {
     width: 100%;
     display: flex;
@@ -99,7 +113,7 @@ a {
 
 /* This element is fixed at the top, overlaying other elements below it. */
 .menu {
-    height: 40px;
+    height: 50px;
     position: fixed;
     background-color: rgba(83,99,127,.7);
 /*     background-blend-mode: multiply; */
@@ -117,7 +131,7 @@ a {
 90% = 360px) */
 .welcome {
     height: 90%;
-    margin-top: 40px;
+    margin-top: 50px;
     flex-direction: column;
 }
 .upper-text,
@@ -131,7 +145,9 @@ a {
 .upper-text {
     font-size: 2.3em;
     letter-spacing: .3em;
+    margin-right: -0.3em;
     font-weight: 600;
+    text-align: center;
 }
 
 .lower-text-first {
@@ -157,12 +173,13 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 50px;
 }
 
 /* Content */
 
 .content {
-    background-color:  #BAD5CF;
+    background-color:  #344466;
     align-items: center;
     height: 500px;
 }
@@ -171,5 +188,6 @@ a {
 .footer {
     background-color: #F6D6A9;
     align-items: center;
+    height: 100px;
     
 }
