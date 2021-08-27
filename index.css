@@ -75,9 +75,10 @@
 
 /* General settings */
 
-body {
+body, html {
     font-family: IBM Plex Sans Thai Looped;
     min-height: 100vh;
+    overflow-x: hidden; 
 }
 
 a {
