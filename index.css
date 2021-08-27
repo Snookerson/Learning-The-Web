@@ -190,7 +190,7 @@ background: linear-gradient(180deg, rgba(104,141,135,1) 0%, rgba(104,141,135,1) 
 /* Sub-Main child element */
 /*  Here we dont have a 100% width proprety, so the future sections can change because of screen size  */
 .features .section-inner {
-/*     border: 1px solid #F8F8FF; */
+    border-right: 2px solid rgba(255,255,255,.05);
     display: flex;
     justify-content: center;
     align-items: center;
