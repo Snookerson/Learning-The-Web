@@ -75,11 +75,11 @@
 
 /* General settings */
 
-/* * {
+* 
     background: #000 !important;
     color: #0f0 !important;
     outline: solid #f00 1px !important;
-  } */
+  } 
 
 body, html {
     font-family: IBM Plex Sans Thai Looped;
