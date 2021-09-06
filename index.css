@@ -75,9 +75,16 @@
 
 /* General settings */
 
-body {
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  } */
+
+body, html {
     font-family: IBM Plex Sans Thai Looped;
     min-height: 100vh;
+    overflow-x: hidden; 
 }
 
 a {
@@ -129,7 +136,7 @@ background: linear-gradient(180deg, rgba(128,175,150,1) 0%, rgba(104,141,135,1) 
 .menu {
     height: 50px;
     position: fixed;
-    background-color: rgba(83,99,127,.7);
+    background-color: rgba(139, 147, 160, 0.7);
 /*     background-blend-mode: multiply; */
     backdrop-filter: blur(5px);
 }
@@ -189,7 +196,7 @@ background: linear-gradient(180deg, rgba(104,141,135,1) 0%, rgba(104,141,135,1) 
 /* Sub-Main child element */
 /*  Here we dont have a 100% width proprety, so the future sections can change because of screen size  */
 .features .section-inner {
-/*     border: 1px solid #F8F8FF; */
+    border-right: 2px solid rgba(255,255,255,.05);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -265,6 +272,7 @@ background: linear-gradient(180deg, rgba(104,141,135,1) 0%, rgba(68,90,112,1) 10
 
 .content-illustration-img {
     max-width: 70%;
+
 }
 
 
