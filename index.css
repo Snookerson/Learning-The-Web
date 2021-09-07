@@ -23,6 +23,7 @@
     .feature-insta,
     .feature-about-me {
         width: 100%;
+        border-bottom: 2px solid rgba(255,255,255,.05);
     }
 
     .content-illustration,
@@ -45,12 +46,16 @@
     .feature-js,
     .feature-my-projects,
     .feature-insta,
-    .feature-about-me,
+    .feature-about-me {
+        width: 50%;
+        border-bottom: 2px solid rgba(255,255,255,.05);
+    }
     .content-illustration,
     .content-text {
         width: 50%;
-    }
 }
+}
+
 
 /* Desktop */
 @media only screen and (min-width: 961px) {
@@ -184,8 +189,8 @@ background: linear-gradient(180deg, rgba(128,175,150,1) 0%, rgba(104,141,135,1) 
 .features {
 /*     background-color: #80af96; */
 
-background: rgb(128,175,150);
-background: linear-gradient(180deg, rgba(104,141,135,1) 0%, rgba(104,141,135,1) 100%);
+    background: rgb(104,140,135);
+    background: linear-gradient(180deg, rgba(100,135,130,1) 0%, rgba(100,135,130,1) 100%);
 }
 
 /* Sub-Main child element */
@@ -300,7 +305,7 @@ background: linear-gradient(180deg, rgba(104,141,135,1) 0%, rgba(68,90,112,1) 10
     background: linear-gradient(180deg, rgba(68,90,112,1) 0%, rgba(52,68,102,1) 100%);
     height: 100px;
     display: flex;
-    color: white;
+    color: rgb(192, 192, 192);
 }
 
 .footer-inner {

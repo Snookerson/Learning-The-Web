@@ -172,3 +172,16 @@ a {
     cursor: pointer;
     background-color: rgba(0, 0, 0, .6);
 }
+
+.checkbox-container {
+
+}
+
+.time-check-box {
+    margin-top: 20px;
+}
+
+.time-check-box-text {
+    margin-left: 10px;
+    color: #F8F8FF;
+}
