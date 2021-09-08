@@ -53,5 +53,6 @@ timeBtnShow.addEventListener("click", function timeFun() { /* We gave this funct
 
     if (box.checked == false) {
         let timeOut = setTimeout(timeFun, 1000) /* We call the timeFun function in every second */
-    }
+    } 
+
 });

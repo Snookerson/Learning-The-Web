@@ -1,0 +1,231 @@
+/* Fonts */
+
+/* IBM Plex Sans Thai Looped */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap');
+
+/* All document setings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+/* Responsive styles */
+
+/* Mobile */
+@media only screen and (max-width: 400px) {
+    .input-section {
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+
+    .content {
+        margin: 10px;
+    }
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .input-section {
+        justify-content: center;
+}
+}
+
+/* Desktop */
+@media only screen and (min-width: 961px) {
+    .input-section {
+        justify-content: center;
+    }
+} 
+body, html {
+    font-family: IBM Plex Sans Thai Looped;
+    overflow-x: hidden; 
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+body {
+    min-height: 100vh;
+    background: rgb(128,175,150);
+    background: linear-gradient(180deg, rgba(128,175,150,1) 0%, rgba(52,68,102,1) 100%);
+}
+
+/* .whole-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+/* Header */
+
+.menu {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(139, 147, 160, 0.7);
+/*     background-blend-mode: multiply; */
+    backdrop-filter: blur(5px);
+
+}
+.logo-container {
+    display: flex;
+}
+
+.header-logo {
+    height: 30px;
+    width: 30px;
+}
+
+
+
+
+
+/* Title */
+
+.title-section {
+/*     border: 2px solid white; */
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 50px;
+    min-height: 175px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-text {
+    text-align: center;
+    padding: 0 10px 0 10px;
+    color: #F8F8FF;
+    letter-spacing: .3em;
+    font-weight: 600;
+}
+
+
+
+
+/* Input */
+
+.input-section {
+/*     border: 2px solid goldenrod ; */
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, .25);
+
+}
+.content {
+    margin: 0 10px 0 10px;
+
+    
+}
+
+.item-name {
+    text-align: center;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.checkbox-label {
+    color:#F8F8FF;
+    font-size: 0.9em;
+    margin: auto;
+}
+.btn {
+    color: #F8F8FF;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: none;
+    background-color: rgba(0, 0, 0, .25);
+    
+}
+
+btn:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.item-name-add-btn {
+    width: 100px;
+    height: 35px;
+    max-width: 120px;
+
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.remove-all-btn {
+    width: 100px;
+    height: 35px;
+    max-width: 120px;
+}
+.remove-btn {
+    min-width: 60px;
+    height: 25px;
+    max-width: 120px;
+}
+
+
+/* Output */
+
+h2 {
+    text-align: center;
+    color: #F8F8FF;
+}
+
+.output-section {
+    padding-top: 20px;
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+/*     background-color: rgba(0, 0, 0, .25); */
+}
+
+.head {
+    display: flex;
+    border-bottom: 2px solid rgba(255,255,255,.1);
+    width: 90%;
+    justify-content: space-evenly;
+    margin: 20px 0 20px 0;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    color: #F8F8FF;
+}
+
+.item-row {
+    display: flex;
+/*     border: 1px solid white; */
+    width: 90%;
+    justify-content: center;
+    margin: 5px 0 5px 0;
+    text-align: center;
+    font-size: 0.8em;
+    color: #F8F8FF
+}
+
+.item {
+    padding: 0 50px 30px 0;
+}
+
+
