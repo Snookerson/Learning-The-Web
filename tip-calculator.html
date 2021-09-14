@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tip-calculator-stlyes.css">
+    <title>Tip Calculator</title>
+</head>
+<body>
+
+    <!-- Header  -------------------------------------------------->
+    <header class="header">
+        <a class="header-logo" href="index.html"><img src="Images/AP logo 4.svg" alt="Site logo"></a> <!-- Images/AP logo 4.svg -->
+    </header>
+
+    <div class="main-container">
+        <section class="title"><h1>Tip Calculator</h1></section>
+        <section class="calc-container">
+
+            <div class="cal-part cal-item-1">
+                <h3 class="bill-total-title">Bill Total</h3>
+                <input id="billTotalInput" onkeyup="allFunction()" value="" class="bill-total-input" type="number" placeholder="HUF">
+            </div>
+
+            <div class="cal-part cal-item-2">
+                <h3 class="tip-total-amount-title">Tip Total Amount</h3>
+                <p id="tipTotalNumber" class="tip-total-amount">0 HUF</p>
+                <p id="tipTotalPer" class="tip-total-per">0%</p>
+            </div>
+
+            <div class="cal-part cal-item-3">
+                <h3 class="tip-btn-title">Select Tip</h3>
+                <div class="tip-btn-container">
+                    <div class="tip-btn">
+                        <button id="5%" class="per-btn" href="#">5%</v>
+                    </div>
+
+                    <div class="tip-btn">
+                        <button id="10%" class="per-btn" href="#">10%</button>
+                    </div>
+
+                    <div class="tip-btn">
+                        <button id="15%" class="per-btn" href="#">15%</button>
+                    </div>
+
+                    <div class="tip-btn">
+                        <button id="20%" class="per-btn" href="#">20%</button>
+                    </div>
+                    <div class="tip-btn">
+                        <button id="25%" class="per-btn" href="#">25%</button>
+                    </div>
+<!--                     <div class="tip-btn">
+                        <button id="custom" class="per-btn" href="#">Custom</button>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="cal-part cal-item-4">
+                <h3 class="bill-total-amount-title">Bill Total After Tip</h3>
+                <p id="billTotalNumber" class="bill-total-amount">0 HUF</p>
+            </div>
+
+            <div class="cal-part cal-item-5">
+                <p class="bill-total-title">First add your bill's total, then select the amount of tip you want to give.</p>
+                <!-- <input id="customImput" onkeyup="getCustomTip()" class="custom-tip-input" type="number" placeholder="%"> -->
+            </div>
+            <div class="cal-part cal-item-6">
+                <button id="resetButton" class="reset-btn" type="button">Reset Calculator</button>
+            </div>
+        </section>
+
+    </div>
+
+<!--     <footer class="footer">
+        <div class=footer-inner>2021</div>
+    </footer> -->
+    <script src="tip-calculator.js"></script>
+</body>
+</html>
