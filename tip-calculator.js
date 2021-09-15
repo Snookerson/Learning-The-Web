@@ -1,63 +1,82 @@
+const tipButton = document.getElementsByClassName("per-btn");
+
 function allFunction() {
     /* Getting the value from the Bill Total input section | !!onkeyup!! is very importan in HTML attribut----------*/
     const billTotalInput = document.getElementById("billTotalInput"); /* Get the input element */
 
     let billTotalValue = billTotalInput.value; /* Find its value */
-    console.log(billTotalValue); /* Just for testing */
+    /* console.log(billTotalValue);  Just for testing */
 
 
-    if (billTotalValue > 0) {
+    if (billTotalValue > 0) {  /* Checks is the number is positive or not */
         /* Make the tip button function ------------------------------------------------------------- */
         const tipButton = document.getElementsByClassName("per-btn"); /* Get the buttons */
+                
         for (let i = 0; i < tipButton.length; i++) {
             let button = tipButton[i]; /* Loop through the buttons before listening for clicks */
             button.addEventListener("click", (event) => { 
 
                 let buttonClicked = event.target.id; /* This event.target finds the exact button we clicked and returns the HTML */
-                console.log("id" + buttonClicked) /* Just for testing */
+                /* console.log("id" + buttonClicked) Just for testing */
+
+
+
+                /* Hightlight active button ------------------- */
+                /* We go through all the "per-btn" buttons and if it has the active class we remove it  */
+                for (let j = 0; j < tipButton.length; j++) {
+                    if (tipButton[j].classList.contains("btn-active")) {
+                        tipButton[j].classList.remove("btn-active");
+                        continue
+                    } else {
+                        continue;
+                    }
+                }
+                /* We add the active class to the clicked button */
+                event.target.classList.add("btn-active");
+
+
 
                 /* Lets creat the necesarry variables */
                 let tip = null;
                 let billTotalAmount = null;
                 let roundedBillTotalValue = null;
+                let customTip = null;
+                
                 switch (buttonClicked) {
                     case "5%":
                         tip = 5; /* Tip amount in intiger  */
                         roundedBillTotalValue = getTotalAmount(tip); /* Call a a function - it adds the tip % to the bill total then rounds it to the closest whole number */
-                        updateBillTotalAmount(roundedBillTotalValue); /* Updating the Bill Total Number Amount with the rounded number */
-                        updateTipTotals(roundedBillTotalValue, tip); /* Updating the Tip total Amount with HUF and % */
+                        setInstuctionBack(); /* Change layout */
                         break;
 
                     case "10%":
                         tip = 10;
                         roundedBillTotalValue = getTotalAmount(tip);
-                        updateBillTotalAmount(roundedBillTotalValue);
-                        updateTipTotals(roundedBillTotalValue, tip);
+                        setInstuctionBack();
                         break;
 
                     case "15%":
                         tip = 15;
                         roundedBillTotalValue = getTotalAmount(tip);
-                        updateBillTotalAmount(roundedBillTotalValue);
-                        updateTipTotals(roundedBillTotalValue, tip);
+                        setInstuctionBack();
                         break;
 
                     case "20%":
                         tip = 20;
                         roundedBillTotalValue = getTotalAmount(tip);
-                        updateBillTotalAmount(roundedBillTotalValue);
-                        updateTipTotals(roundedBillTotalValue, tip);
+                        setInstuctionBack();
                         break;
 
                     case "25%":
                         tip = 25;
                         roundedBillTotalValue = getTotalAmount(tip);
-                        updateBillTotalAmount(roundedBillTotalValue);
-                        updateTipTotals(roundedBillTotalValue, tip);
+                        setInstuctionBack();
                         break;
 
                     case "custom":
-                        console.log("ok custom");
+                        tip = 0;
+                        changeCtLayout();
+                        getCustomTip ();                          
                         break;
                     }
 
@@ -76,6 +95,16 @@ function allFunction() {
         tipTotalPer.innerText = "0%";
         billTotalInput.value = "";
         billTotalNumber.innerText = "0 HUF";
+        customInput.value = "";
+        setInstuctionBack ();
+        for (let j = 0; j < tipButton.length; j++) {
+            if (tipButton[j].classList.contains("btn-active")) {
+                tipButton[j].classList.remove("btn-active");
+                continue
+            } else {
+                continue;
+            }
+        }
     })
 
 
@@ -85,10 +114,12 @@ function allFunction() {
 function getTotalAmount(tip) {
     billTotalAmount = billTotalValue * ((100 + tip)/100);
     roundedBillTotalValue = Math.round(billTotalAmount);
-    return roundedBillTotalValue;
+    updateTipTotals(roundedBillTotalValue, tip); /* Updating the Tip total Amount with HUF and % */
+    updateBillTotalAmount(roundedBillTotalValue); /* Updating the Bill Total Number Amount with the rounded number */
+
 }
 
-/* Update Bill Total Amound */
+/* Update Bill Total Amound ----------------------------*/
 function updateBillTotalAmount(roundedBillTotalValue) {
     const billTotalNumber = document.getElementById("billTotalNumber");
     billTotalNumber.innerText = roundedBillTotalValue + " HUF";
@@ -106,7 +137,60 @@ function updateTipTotals(roundedBillTotalValue, tip) {
 
 }
 
-/* Update Tip Total Amount percentage*/
+/* Custom Tip -------------------------------------------------------*/
+
+/* Custom Tip layout Change -------*/
+function changeCtLayout(){
+    const instText = document.getElementsByClassName("instruction")[0];
+    const ctTitle = document.getElementsByClassName("custom-tip-title")[0];
+    const customInput = document.getElementById("customInput");
+
+    instText.classList.remove("active-ct-input");
+    instText.classList.add("remove-ct");
+
+    ctTitle.classList.remove("remove-ct");
+    ctTitle.classList.add("active-ct-input");
+
+    customInput.classList.remove("remove-ct");
+    customInput.classList.add("active-ct-input");
+} 
+
+/* Custom Tip layout show only instruction if the custom button is unselected -------*/
+
+function setInstuctionBack () {
+    const instText = document.getElementsByClassName("instruction")[0];
+    const ctTitle = document.getElementsByClassName("custom-tip-title")[0];
+    const customInput = document.getElementById("customInput");
+
+    if (instText.classList.contains("remove-ct")) {
+        instText.classList.add("active-ct-input");
+
+        ctTitle.classList.remove("active-ct-input");
+        ctTitle.classList.add("remove-ct");
+
+        customInput.classList.remove("active-ct-input");
+        customInput.classList.add("remove-ct");
+        
+    } else {
+        return
+    }
+
+}
+
+/* Get Custom Tip value ----------------------*/
+function getCustomTip() {
+    const customTipInput = document.getElementById("customInput");
+    customTipInput.addEventListener("input", () => {
+        customTip = customTipInput.value;
+        if (customTip > 0) { /* Checks is the number is positive or not */
+            tip = parseInt(customTip); /* Makes it an intiger */
+/*             console.log(tip) */
+            roundedBillTotalValue = getTotalAmount(tip);
+        }else if (customTip < 0) {
+            alert("Oh bollocks, you just did that, do you? You can't give a negative tip...")
+            customTipInput.value = "";}
+    })
+    }
 
 
 

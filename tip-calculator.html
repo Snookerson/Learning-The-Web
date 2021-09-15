@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="tip-calculator-stlyes.css">
     <title>Tip Calculator</title>
 </head>
@@ -19,8 +20,10 @@
         <section class="calc-container">
 
             <div class="cal-part cal-item-1">
-                <h3 class="bill-total-title">Bill Total</h3>
-                <input id="billTotalInput" onkeyup="allFunction()" value="" class="bill-total-input" type="number" placeholder="HUF">
+                <h3 title="Copy the total from the receipt!" class="bill-total-title">Bill Total
+                    <i class="fas fa-money-check-alt"></i>
+                </h3>
+                <input id="billTotalInput" onkeyup="allFunction()" value="" class="bill-total-input" type="number" placeholder="Enter total in HUF">
             </div>
 
             <div class="cal-part cal-item-2">
@@ -30,7 +33,9 @@
             </div>
 
             <div class="cal-part cal-item-3">
-                <h3 class="tip-btn-title">Select Tip</h3>
+                <h3 class="tip-btn-title">Select Tip
+                    <i class="fas fa-hand-holding-usd"></i>
+                </h3>
                 <div class="tip-btn-container">
                     <div class="tip-btn">
                         <button id="5%" class="per-btn" href="#">5%</v>
@@ -50,9 +55,9 @@
                     <div class="tip-btn">
                         <button id="25%" class="per-btn" href="#">25%</button>
                     </div>
-<!--                     <div class="tip-btn">
+                    <div class="tip-btn">
                         <button id="custom" class="per-btn" href="#">Custom</button>
-                    </div> -->
+                    </div>
                 </div>
             </div>
 
@@ -61,10 +66,17 @@
                 <p id="billTotalNumber" class="bill-total-amount">0 HUF</p>
             </div>
 
+            <!-- Custom Tip Input ----------------------------------------- -->
             <div class="cal-part cal-item-5">
-                <p class="bill-total-title">First add your bill's total, then select the amount of tip you want to give.</p>
-                <!-- <input id="customImput" onkeyup="getCustomTip()" class="custom-tip-input" type="number" placeholder="%"> -->
+                <p class="instruction active-ct-input">First add your bill's total, then select the amount of tip you want to give.</p>
+                <h3 class="custom-tip-title remove-ct">Custom Tip
+                    <i class="fas fa-edit"></i>
+                </h3>
+                <input id="customInput" value="" class="custom-tip-input remove-ct" type="number" placeholder="Your custom tip in %">
             </div>
+
+
+
             <div class="cal-part cal-item-6">
                 <button id="resetButton" class="reset-btn" type="button">Reset Calculator</button>
             </div>
