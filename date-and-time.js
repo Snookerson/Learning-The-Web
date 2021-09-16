@@ -56,3 +56,34 @@ timeBtnShow.addEventListener("click", function timeFun() { /* We gave this funct
     } 
 
 });
+
+/* Modal Section ------------------------------------------- */
+
+
+const openModalButton = document.getElementById("open-modal");
+const closeModalButton = document.getElementById("close-modal")
+const overlay = document.getElementById("overlay")
+const modal = document.getElementById("modal");
+
+openModalButton.addEventListener("click", () => {
+    openModal(modal);
+})
+
+closeModalButton.addEventListener("click", () => {
+    closeModal(modal);
+})
+
+overlay.addEventListener("click", ( )=> {
+    modal.classList.remove("active-modal");
+    overlay.classList.remove("active-overlay");
+})
+
+function openModal(modal) {
+    modal.classList.add("active-modal");
+    overlay.classList.add("active-overlay");
+}
+
+function closeModal(modal) {
+    modal.classList.remove("active-modal");
+    overlay.classList.remove("active-overlay");
+}

@@ -12,10 +12,12 @@
 
     <!-- Header  -------------------------------------------------->
     <header class="header">
-        <a class="header-logo" href="index.html"><img src="Images/AP logo 4.svg" alt="Site logo"></a> <!-- Images/AP logo 4.svg -->
+        <a class="header-logo" href="index.html"><img src="Images/AP logo 4.svg" alt="Site logo"></a>
     </header>
 
     <div class="main-container">
+        
+
         <section class="title"><h1>Tip Calculator</h1></section>
         <section class="calc-container">
 
@@ -83,6 +85,35 @@
         </section>
 
     </div>
+
+    <!-- Modal ------------------------------------------------->
+    <button id="open-modal" data-modal-target="#modal" type="button" class="modal-button">
+        <i class="fas fa-info-circle fa-2x"></i>
+    </button>
+    
+    <div class="modal" id="modal"> <!-- active-modal -->
+        <div class="modal-header">
+            <div class="modal-title">Watch out these features</div>
+            <buttom id="close-modal" data-close-button class="close-button">&times;</buttom>
+        </div>
+
+        <div class="modal-body">
+            <ul class="modal-list">
+                <li>Responsive site layout</li>
+                <li>Tip calculation based on button press or the user's custom input</li>
+                <li>Tip percentage buttons stay highlighted until another button is pressed</li>
+                <li>Custom input field only visible while custom button is selected</li>
+                <li>Result shown different ways</li>
+                <li>Linked Font Awesome icons</li>
+                <li>Reset button</li>
+                <li>Modal window function by button press, duh</li>
+            </ul>
+            </div>
+    </div>
+
+    <div class="" id="overlay"></div> <!-- active-overlay -->
+
+    
 
 <!--     <footer class="footer">
         <div class=footer-inner>2021</div>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="gombi-styles.css">
     <link rel="shortcut icon" type="image/png" href="Images/favicon.png">
     <title>Gömbi</title>
@@ -113,8 +114,37 @@
             <p class="footer-inner">More of her:</p>
             <a class="instagram-logo" target="_blanc" href="https://www.instagram.com/kissuti/"><img id="insta" class="instagram-logo-img" src="Images/light-insta-logo.png" alt="instagram logo"></a>
         </footer>
-
     </div>
+
+        <!-- Modal ------------------------------------------------->
+        <button id="open-modal" data-modal-target="#modal" type="button" class="modal-button">
+            <i class="fas fa-info-circle fa-2x"></i>
+        </button>
+        
+        <div class="modal" id="modal"> <!-- active-modal -->
+            <div class="modal-header">
+                <div class="modal-title">Watch out these features</div>
+                <buttom id="close-modal" data-close-button class="close-button">&times;</buttom>
+            </div>
+    
+            <div class="modal-body">
+                <ul class="modal-list">
+                    <li>Responsive site layout</li>
+                    <li>Scrollable article titles</li>
+                    <li>Fully working dark mode</li>
+                    <li>The cutes dog ever</li>
+                    <li>Modal window function by button press, duh</li>
+
+                </ul>
+                </div>
+        </div>
+    
+        <div class="" id="overlay"></div> <!-- active-overlay -->
+    
+        
+    
+     
+
     <script src="gombi.js"></script>
 </body>
 </html>
